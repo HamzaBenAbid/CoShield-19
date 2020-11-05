@@ -12,18 +12,18 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logogenrale"
-
-        />
+        android:layout_weight="1"
+        android:layout_marginTop="30"
+        android:src="@drawable/logogenrale" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CoShilde19"
-        android:textSize="30sp"
+        android:layout_weight="1"
         android:gravity="center"
-        />
+        android:text="CoShilde19"
+        android:textSize="30sp" />
 
 
 </LinearLayout>
