@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Coshiled19</string>
+    <string name="app_name"  >CoShield-19</string>
+    <string name="sign_in"   > Sign me in </string>
+    <string name="sign_up"   > Sign up </string>
+    <string name="lost_pass" > Forget Password  </string>
+    <string name="Email"     > Email </string>
+    <string name="Password"  > Password </string>
+    <string name="username"  > Username </string>
+    <string name="wrong_pass"> wrong Credentials </string>
+    <string name="appname"  > CoShield-19 </string>
 </resources>
