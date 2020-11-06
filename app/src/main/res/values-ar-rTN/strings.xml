@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoShield-19</string>
+    <string name="sign_in">sajelni</string>
+    <string name="sign_up">a3ml compte</string>
+    <string name="lost_pass">nsit il mot de passe</string>
+    <string name="Email">el email</string>
+    <string name="Password">kalimet el ser</string>
+    <string name="username">ismek fil application</string>
+    <string name="wrong_pass">thabet fi mot de passe ta3ek</string>
+</resources>

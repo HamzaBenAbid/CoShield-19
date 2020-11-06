@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoShield-19</string>
+    <string name="sign_in">Connexion</string>
+    <string name="sign_up">Créer un compte</string>
+    <string name="lost_pass">oublié mot de passe</string>
+    <string name="Email">email</string>
+    <string name="Password">mot de passe</string>
+    <string name="username">username</string>
+    <string name="wrong_pass">mot de passe est incorrect</string>
+</resources>
