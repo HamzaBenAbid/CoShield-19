@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#CCFFFF"
+    android:background="#fff"
     android:padding="20dp">
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/logogenrale"></ImageView>
-
+        android:src="@drawable/logogenrale"
+        android:contentDescription="@string/app_name"></ImageView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_input_username_toggle"
+        android:id="@+id/username"
         android:hint="@string/username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -33,7 +29,21 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text_input_password_toggle"
+        android:id="@+id/email"
+        android:hint="@string/Email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
         android:hint="@string/Password"
         app:passwordToggleEnabled="true"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -42,30 +52,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+
             android:drawableStart="@drawable/ic_action_password" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
-        android:text="@string/sign_in"
-        android:layout_gravity="end"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lost_pass"
-        android:background="#000"
+        android:id="@+id/phone"
+        android:hint="@string/phone_number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        android:textColor="#fff"
-        />
-
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:id="@+id/signup_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/go_to"
         android:background="@color/REd"
-        android:text="@string/sign_up"
-        android:textColor="#000" />
+        android:textColor="#fff"
+        ></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/have_account"
+        android:background="#000"
+        android:textColor="#fff"
+        ></Button>
+
+
+
 </LinearLayout>

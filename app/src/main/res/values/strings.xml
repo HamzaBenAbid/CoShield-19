@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name"  >CoShield-19</string>
-    <string name="sign_in"   > Sign me in </string>
-    <string name="sign_up"   > Sign up </string>
-    <string name="lost_pass" > Forget Password  </string>
-    <string name="Email"     > Email </string>
-    <string name="Password"  > Password </string>
-    <string name="username"  > Username </string>
+    <string name="app_name">CoShield-19</string>
+    <string name="sign_in"> Sign me in </string>
+    <string name="sign_up"> Sign up </string>
+    <string name="lost_pass"> Forget Password  </string>
+    <string name="Email"> Email </string>
+    <string name="Password"> Password </string>
+    <string name="username"> Username </string>
     <string name="wrong_pass"> wrong Credentials </string>
     <string name="appname" translatable="false"> CoShield-19 </string>
+    <string name="go_to" translatable="false">GO</string>
+    <string name="phone_number" translatable="false">phone number</string>
+    <string name="have_account" translatable="false">Alredy have an account? Login</string>
+
 </resources>
