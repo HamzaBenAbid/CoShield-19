@@ -12,4 +12,11 @@
     <string name="go_to">اذهب</string>
     <string name="phone_number">رقم الهاتف</string>
     <string name="have_account">لديك حساب؟ تسجيل الدخول</string>
+    <string name="dash_board">لوحة القيادة</string>
+    <string name="profile">"الملف الشخصي "</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="settings_text">ضبط</string>
+    <string name="heath_condition">الحالة الصحية</string>
+    <string name="all_users">جميع المستخدمين</string>
+    <string name="Question">سؤال</string>
 </resources>

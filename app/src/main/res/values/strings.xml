@@ -11,5 +11,12 @@
     <string name="go_to">GO</string>
     <string name="phone_number">phone number</string>
     <string name="have_account">Alredy have an account? Login</string>
+    <string name="dash_board">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="logout">logout</string>
+    <string name="settings_text">settings</string>
+    <string name="heath_condition"> heath condition</string>
+    <string name="all_users"> all users</string>
+    <string name="Question">Question</string>Question/string>
 
 </resources>

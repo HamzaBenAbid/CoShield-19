@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class Login extends AppCompatActivity {
-    Button callsignup ;
+    Button callsignup ,callsignin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,14 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(Login.this,Signup2.class);
+                startActivity(intent);
+            }
+        });
+        callsignin=findViewById(R.id.signin_btn);
+        callsignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Login.this,Home.class);
                 startActivity(intent);
             }
         });

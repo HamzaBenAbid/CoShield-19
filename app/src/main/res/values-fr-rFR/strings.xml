@@ -12,4 +12,11 @@
     <string name="appname">" CoShield-19 "</string>
     <string name="phone_number">numéro de téléphone</string>
     <string name="have_account">Avez-vous déjà un compte? S\'identifier</string>
+    <string name="dash_board">" Tableau de bord"</string>
+    <string name="profile">Profile</string>
+    <string name="logout">" Se déconnecter"</string>
+    <string name="settings_text">paramètre</string>
+    <string name="heath_condition">état de santé</string>
+    <string name="all_users">" tous les utilisateurs"</string>
+    <string name="Question">Question</string>
 </resources>
