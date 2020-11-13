@@ -33,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text_input_username_toggle"
+        android:layout_margin="20dp"
         android:hint="@string/username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -47,6 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text_input_password_toggle"
+        android:layout_margin="20dp"
         android:hint="@string/Password"
         app:passwordToggleEnabled="true"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -59,6 +61,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -70,7 +73,7 @@
         android:layout_height="wrap_content"
         android:text="@string/lost_pass"
         android:background="#000"
-
+        android:layout_margin="20dp"
         android:textColor="#fff"
         />
 
@@ -80,6 +83,7 @@
         android:layout_height="wrap_content"
         android:background="@color/REd"
         android:text="@string/sign_up"
+        android:layout_margin="20dp"
         android:textColor="#000" />
 </LinearLayout>
 </ScrollView>
