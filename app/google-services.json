@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "717575963910",
+    "firebase_url": "https://coshiled19.firebaseio.com",
+    "project_id": "coshiled19",
+    "storage_bucket": "coshiled19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717575963910:android:8a28efa5458170328d8a87",
+        "android_client_info": {
+          "package_name": "com.example.coshiled19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717575963910-6iqve4qdq1sesl0f80g0ov3q31qo9mco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrHr45mRG495sdVWAr5nYF5LuZu-79xRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717575963910-6iqve4qdq1sesl0f80g0ov3q31qo9mco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
