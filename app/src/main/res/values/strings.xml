@@ -7,9 +7,9 @@
     <string name="Password"> Password </string>
     <string name="username"> Username </string>
     <string name="wrong_pass"> wrong Credentials </string>
-    <string name="appname" translatable="false"> CoShield-19 </string>
-    <string name="go_to" translatable="false">GO</string>
-    <string name="phone_number" translatable="false">phone number</string>
-    <string name="have_account" translatable="false">Alredy have an account? Login</string>
+    <string name="appname"> CoShield-19 </string>
+    <string name="go_to">GO</string>
+    <string name="phone_number">phone number</string>
+    <string name="have_account">Alredy have an account? Login</string>
 
 </resources>

@@ -8,4 +8,8 @@
     <string name="Password">كلمة المرور</string>
     <string name="username">اسم المستخدم</string>
     <string name="wrong_pass">كلمة مرور خاطئة</string>
+    <string name="appname">" CoShield-19 "</string>
+    <string name="go_to">اذهب</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="have_account">لديك حساب؟ تسجيل الدخول</string>
 </resources>
