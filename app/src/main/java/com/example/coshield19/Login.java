@@ -1,4 +1,4 @@
-package com.example.coshiled19;
+package com.example.coshield19;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.coshiled19.R;
 
 
 public class Login extends AppCompatActivity {

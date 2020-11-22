@@ -1,4 +1,4 @@
-package com.example.coshiled19;
+package com.example.coshield19;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.coshiled19.R;
 
 public class MainActivity extends AppCompatActivity {
 

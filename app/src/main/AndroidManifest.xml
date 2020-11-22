@@ -9,10 +9,10 @@
         android:roundIcon="@drawable/logogenrale"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
-        <activity android:name=".Signup2" />
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.coshield19.Home"></activity>
+        <activity android:name="com.example.coshield19.Signup2" />
+        <activity android:name="com.example.coshield19.Login" />
+        <activity android:name="com.example.coshield19.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
