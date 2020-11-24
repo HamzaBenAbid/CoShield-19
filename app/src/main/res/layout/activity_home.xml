@@ -54,7 +54,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="6"
         android:orientation="vertical"
         android:weightSum="2"
@@ -115,7 +115,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/checknearby"
+                        android:src="@drawable/heath_condition"
                         />
 
                     <TextView
@@ -155,7 +155,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/taketest"
+                        android:src="@drawable/heath_condition"
                         />
 
                     <TextView
@@ -184,7 +184,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/global"
+                        android:src="@drawable/heath_condition"
                         />
 
                     <TextView
