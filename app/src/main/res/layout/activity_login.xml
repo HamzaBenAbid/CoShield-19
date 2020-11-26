@@ -26,8 +26,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/app_name"
+
                 android:src="@drawable/logogenrale"
+                android:contentDescription="@string/app_name"
                 android:visibility="visible"></ImageView>
 
             <com.google.android.material.textfield.TextInputEditText
