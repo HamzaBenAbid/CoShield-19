@@ -20,4 +20,6 @@
     <string name="Map">"التحقق من المستخدمين المصابين "</string>
     <string name="Take_Test">إجراء اختبار طبي</string>
     <string name="GlobalMap">التحقق من الحالات العمومية/المحلية</string>
+    <string name="upload_photo">حمل الصورة</string>
+    <string name="update">تحديث</string>
 </resources>

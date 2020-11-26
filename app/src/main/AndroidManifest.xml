@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logogenrale"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.coshield19.Home"></activity>
+        <activity android:name="com.example.coshield19.Profile"/>
+        <activity android:name="com.example.coshield19.Home" />
         <activity android:name="com.example.coshield19.Signup2" />
         <activity android:name="com.example.coshield19.Login" />
         <activity android:name="com.example.coshield19.MainActivity">
