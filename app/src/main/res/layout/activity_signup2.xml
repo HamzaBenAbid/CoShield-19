@@ -95,13 +95,14 @@
         android:textColor="#fff"></Button>
 
     <Button
-        android:layout_margin="20dp"
-        android:id="@+id/dont_btn"
+        android:id="@+id/alredy_have_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
+        android:layout_margin="20dp"
+        android:background="@color/REd"
         android:text="@string/have_account"
         android:textColor="#fff"></Button>
+
 
 
 </LinearLayout>
