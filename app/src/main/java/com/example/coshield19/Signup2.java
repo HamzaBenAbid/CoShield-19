@@ -22,12 +22,13 @@ public class Signup2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup2);
-        button  = findViewById(R.id.alredy_have_btn);
+
+       button  = findViewById(R.id.alredy_have_btn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Signup2.this,Login.class);
-                startActivity(intent);
+                Intent i =new Intent(Signup2.this,  Login.class);
+                startActivity(i);
             }
         });
 
@@ -37,7 +38,7 @@ public class Signup2 extends AppCompatActivity {
         c= findViewById(R.id.reg_password);
        d= findViewById(R.id.reg_phone_number);
         button2 =findViewById(R.id.go_btn);
-        button.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
              root = FirebaseDatabase.getInstance();
@@ -52,6 +53,7 @@ public class Signup2 extends AppCompatActivity {
              reference.child(phoneNo).setValue(helper);
             }
         });
+
     }
 
 
