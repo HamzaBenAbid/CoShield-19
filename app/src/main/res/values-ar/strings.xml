@@ -22,4 +22,10 @@
     <string name="GlobalMap">التحقق من الحالات العمومية/المحلية</string>
     <string name="upload_photo">حمل الصورة</string>
     <string name="update">تحديث</string>
+    <string name="homme">ذكر</string>
+    <string name="femme">أنثى</string>
+    <string name="take_test">خذ الاختبار</string>
+    <string name="sex">"جنس   "</string>
+    <string name="height">"طول القامة "</string>
+    <string name="weight">الوزن</string>
 </resources>

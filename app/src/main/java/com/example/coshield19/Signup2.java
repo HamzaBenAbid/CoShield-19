@@ -49,7 +49,7 @@ public class Signup2 extends AppCompatActivity {
                 String email = b.getEditText().getText().toString();
                 String password = c.getEditText().getText().toString();
                 String phoneNo = d.getEditText().getText().toString();
-              UserHelperClass helper =new UserHelperClass(name,email,password,phoneNo);
+              UserHelperClass helper =new UserHelperClass(name,email,phoneNo,password);
              reference.child(phoneNo).setValue(helper);
             }
         });

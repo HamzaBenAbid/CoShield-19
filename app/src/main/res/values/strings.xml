@@ -21,6 +21,12 @@
     <string name="Take_Test">Take/Retake a test </string>
     <string name="upload_photo">upload photo </string>
     <string name="update">update </string>
+    <string name="homme">homme </string>
+    <string name="femme">femme </string>
+    <string name="take_test">Take Test </string>
+    <string name="sex">sex </string>
+    <string name="height">height </string>
+    <string name="weight">weight </string>
 
 
 
