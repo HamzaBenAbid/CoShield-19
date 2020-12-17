@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.coshiled19">
+    package="com.example.coshield19">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,6 @@
         android:roundIcon="@drawable/logogenrale"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".test"></activity>
         <activity android:name="com.example.coshield19.Profile" />
         <activity android:name="com.example.coshield19.Home" />
         <activity android:name="com.example.coshield19.Signup2" />
