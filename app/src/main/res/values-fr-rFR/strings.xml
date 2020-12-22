@@ -27,5 +27,6 @@
     <string name="take_test">"Faites un test "</string>
     <string name="sex">sexe</string>
     <string name="height">Hauteur</string>
-    <string name="weight">poid</string>
+    <string name="weight">" poids"</string>
+    <string name="empty_field">" Le champ ne peut pas être vide"</string>
 </resources>
