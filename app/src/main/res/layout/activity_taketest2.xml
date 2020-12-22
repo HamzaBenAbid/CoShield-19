@@ -9,6 +9,8 @@
     android:background="@color/cardColor"
     tools:context="com.example.coshield19.Home"
     android:gravity="center">
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,45 +19,37 @@
         android:textSize="50sp"
         android:text="@string/take_test">
     </TextView>
-    <TextView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        android:text="@string/take_test">
-    </TextView>
-
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:text="@string/sex">
-    </TextView>
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <RadioButton android:id="@+id/radio_homme"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/homme" />
-        <RadioButton android:id="@+id/radio_femme"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="@string/sex">
+        </TextView>
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/femme" />
-    </RadioGroup>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_homme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/homme" />
+            <RadioButton android:id="@+id/radio_femme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/femme" />
+        </RadioGroup>
 
 
-</LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

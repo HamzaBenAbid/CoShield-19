@@ -9,22 +9,9 @@
     android:background="@color/cardColor"
     tools:context="com.example.coshield19.Home">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/app_bar"
-            style="@style/Widget.AppCompat.Toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:defaultFocusHighlightEnabled="false"
-            app:navigationIcon="@android:drawable/ic_menu_sort_by_size">
 
 
-        </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.appbar.AppBarLayout>
 
 
     <LinearLayout
@@ -150,6 +137,7 @@
                         android:textAlignment="center" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/take_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
@@ -183,6 +171,7 @@
                         android:textAlignment="center" />
                 </LinearLayout>
                 <Button
+                    android:id="@+id/check_global"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"

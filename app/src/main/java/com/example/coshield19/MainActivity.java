@@ -11,7 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.coshiled19.R;
+
 
 public class MainActivity extends AppCompatActivity {
 
