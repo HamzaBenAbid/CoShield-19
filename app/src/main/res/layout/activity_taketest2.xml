@@ -8,7 +8,7 @@
     android:weightSum="7"
     android:background="@color/cardColor"
     tools:context="com.example.coshield19.Home"
-    android:gravity="center">
+    android:padding="30dp">
 
 
     <TextView
@@ -80,6 +80,67 @@
             android:inputType="number">
         </EditText>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="@string/age">
+
+        </TextView>
+        <Spinner
+            android:id="@+id/age_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="@string/Symptoms">
+
+        </TextView>
+
+        <CheckBox android:id="@+id/fever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fever" />
+        <CheckBox android:id="@+id/sore_throat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smelltaste" />
+        <CheckBox android:id="@+id/smell_taste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sorethroat" />
+        <CheckBox android:id="@+id/tiredness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tireddness" />
+        <Button
+            android:layout_margin="20dp"
+            android:id="@+id/go_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/REd"
+            android:text="@string/go_to"
+            android:textColor="#fff">
+
+        </Button>
+
+
+
 
 
 

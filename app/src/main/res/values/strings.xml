@@ -28,6 +28,16 @@
     <string name="height">height </string>
 
     <string name="weight">weight </string>
+    <string name="age">Age </string>
+    <string name="fever">fever </string>
+    <string name="sorethroat">SoreThroat </string>
+    <string name="smelltaste">Loss of smell and taste </string>
+    <string name="tireddness">Tiredness </string>
+    <string name="Symptoms">Symptoms </string>
+
+
+
+
 
 
 </resources>
