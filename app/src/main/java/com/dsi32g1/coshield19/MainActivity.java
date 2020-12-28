@@ -1,4 +1,4 @@
-package com.example.coshield19;
+package com.dsi32g1.coshield19;
 
 import androidx.appcompat.app.AppCompatActivity;
 

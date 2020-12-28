@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="7"
     android:background="@color/cardColor"
-    tools:context="com.example.coshield19.Home"
+    tools:context="com.dsi32g1.coshield19.Home"
     android:padding="30dp">
 
 
@@ -138,16 +138,6 @@
             android:textColor="#fff">
 
         </Button>
-
-
-
-
-
-
-
-
-
-
-
 </LinearLayout>
 
+</LinearLayout>

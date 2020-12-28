@@ -28,5 +28,19 @@
     <string name="sex">sexe</string>
     <string name="height">Hauteur</string>
     <string name="weight">" poids"</string>
-    <string name="empty_field">" Le champ ne peut pas être vide"</string>
+    <string name="age">Âge</string>
+    <string name="sorethroat">" Gorge irritée"</string>
+    <string name="fever">"fièvre "</string>
+    <string name="smelltaste">"Perte d'odeur et de goût "</string>
+    <string name="tireddness">"Tiredness "</string>
+    <string name="Symptoms">"Symptômes "</string>
+    <string name="navigation_drawer_open">" Ouvrir le tiroir de navigation"</string>
+    <string name="navigation_drawer_close">" Fermer le panneau de navigation"</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">" En-tête de navigation"</string>
+    <string name="action_settings">" Réglages "</string>
+    <string name="menu_home">" Accueil"</string>
+    <string name="menu_gallery">Galerie</string>
+    <string name="menu_slideshow">" Diaporama"</string>
 </resources>

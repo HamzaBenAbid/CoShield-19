@@ -28,4 +28,19 @@
     <string name="sex">"جنس   "</string>
     <string name="height">"طول القامة "</string>
     <string name="weight">الوزن</string>
+    <string name="age">العمر</string>
+    <string name="fever">حمى</string>
+    <string name="sorethroat">"إلتهاب الحلق "</string>
+    <string name="smelltaste">"فقدان حاسة الشم والتذوق "</string>
+    <string name="tireddness">التعب</string>
+    <string name="Symptoms">"الأعراض "</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="navigation_drawer_open">فتح درج التنقل</string>
+    <string name="navigation_drawer_close">أغلق درج التنقل</string>
+    <string name="nav_header_desc">رأس التنقل</string>
+    <string name="action_settings">إعدادات</string>
+    <string name="menu_home">الصفحة الرئيسية</string>
+    <string name="menu_gallery">صالة عرض</string>
+    <string name="menu_slideshow">عرض الشرائح</string>
 </resources>

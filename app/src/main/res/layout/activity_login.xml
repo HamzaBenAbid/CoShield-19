@@ -12,7 +12,7 @@
         android:background="#00CCFFFF"
         android:orientation="vertical"
         android:padding="20dp"
-        tools:context="com.example.coshield19.Login">
+        tools:context="com.dsi32g1.coshield19.Login">
 
 
         <LinearLayout

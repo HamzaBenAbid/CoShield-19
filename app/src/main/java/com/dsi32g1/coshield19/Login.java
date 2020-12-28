@@ -1,9 +1,8 @@
-package com.example.coshield19;
+package com.dsi32g1.coshield19;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -67,7 +66,7 @@ public class Login extends AppCompatActivity {
                                 passwordval.setError(null);
                                 passwordval.setErrorEnabled(false);
 
-                                Intent intent = new Intent(Login.this, Home.class);
+                                Intent intent = new Intent(Login.this, navbar.class);
                                 startActivity(intent);
 
                             } else {

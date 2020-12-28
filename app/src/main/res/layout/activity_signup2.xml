@@ -87,7 +87,7 @@
 
     <Button
         android:layout_margin="20dp"
-        android:id="@+id/go_btn"
+        android:id="@+id/go1_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/REd"
