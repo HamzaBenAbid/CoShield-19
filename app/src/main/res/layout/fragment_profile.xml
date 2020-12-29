@@ -19,4 +19,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/activity_profile2"></include>
 </androidx.constraintlayout.widget.ConstraintLayout>
