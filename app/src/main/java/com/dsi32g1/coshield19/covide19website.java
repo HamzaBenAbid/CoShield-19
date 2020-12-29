@@ -14,6 +14,6 @@ private  WebView webView;
         setContentView(R.layout.activity_covide19website);
         webView=findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.google.com");
+        webView.loadUrl("https://www.worldometers.info/coronavirus/?utm_campaign=homeAdvegas1?");
     }
 }
