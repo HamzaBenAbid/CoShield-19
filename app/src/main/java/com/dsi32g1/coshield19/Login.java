@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
                                 passwordval.setError(null);
                                 passwordval.setErrorEnabled(false);
 
-                                Intent intent = new Intent(Login.this, navbar.class);
+                                Intent intent = new Intent(Login.this, Home.class);
                                 startActivity(intent);
 
                             } else {

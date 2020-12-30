@@ -43,4 +43,5 @@
     <string name="menu_home">" Accueil"</string>
     <string name="menu_gallery">Galerie</string>
     <string name="menu_slideshow">" Diaporama"</string>
+    <string name="logout_id">Se déconnecter</string>
 </resources>

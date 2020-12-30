@@ -38,7 +38,7 @@ public class Signup2 extends AppCompatActivity {
         c= findViewById(R.id.reg_password);
        d= findViewById(R.id.reg_phone_number);
 
-        button2 =findViewById(R.id.go_btn);
+        button2 =findViewById(R.id.go1_btn);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

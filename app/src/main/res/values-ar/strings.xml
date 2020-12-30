@@ -43,4 +43,5 @@
     <string name="menu_home">الصفحة الرئيسية</string>
     <string name="menu_gallery">صالة عرض</string>
     <string name="menu_slideshow">عرض الشرائح</string>
+    <string name="logout_id">تسجيل خروج</string>
 </resources>

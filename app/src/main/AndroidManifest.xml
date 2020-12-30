@@ -9,10 +9,6 @@
         android:roundIcon="@drawable/logogenrale"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.dsi32g1.coshield19.navbar"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name="com.dsi32g1.coshield19.covide19website" />
         <activity android:name="com.dsi32g1.coshield19.taketest" />
         <activity android:name="com.dsi32g1.coshield19.Profile" />
