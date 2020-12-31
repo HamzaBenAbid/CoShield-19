@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +17,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="50sp"
-        android:text="@string/take_test">
+        android:text="@string/take_test"
+        android:layout_marginBottom="70dp">
     </TextView>
 
 
@@ -25,19 +26,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
             android:textSize="20sp"
+
             android:text="@string/sex">
         </TextView>
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
+
             <RadioButton android:id="@+id/radio_homme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,8 +68,11 @@
         </TextView>
         <EditText
             android:layout_width="wrap_content"
+            android:id="@+id/height"
+
             android:layout_height="match_parent"
-            android:inputType="number">
+            android:inputType="number"
+            android:importantForAutofill="no">
         </EditText>
         <TextView
             android:layout_width="wrap_content"
@@ -75,8 +82,11 @@
             android:text="@string/weight">
         </TextView>
         <EditText
+            android:id="@+id/weight"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:importantForAutofill="no"
+
             android:inputType="number">
         </EditText>
     </LinearLayout>
@@ -90,13 +100,15 @@
             android:layout_height="match_parent"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="@string/age">
+            android:text="@string/age"
+            >
 
         </TextView>
         <Spinner
             android:id="@+id/age_spinner"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+        </Spinner>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,26 +120,31 @@
             android:layout_height="match_parent"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="@string/Symptoms">
+            android:text="@string/Symptoms"
+            android:layout_marginBottom="20dp">
 
         </TextView>
 
         <CheckBox android:id="@+id/fever"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fever" />
+            android:text="@string/fever"
+            android:layout_marginBottom="20dp"/>
         <CheckBox android:id="@+id/sore_throat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/smelltaste" />
+            android:text="@string/smelltaste"
+            android:layout_marginBottom="20dp"/>
         <CheckBox android:id="@+id/smell_taste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sorethroat" />
+            android:text="@string/sorethroat"
+            android:layout_marginBottom="20dp"/>
         <CheckBox android:id="@+id/tiredness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tireddness" />
+            android:text="@string/tireddness"
+            android:layout_marginBottom="20dp"/>
         <Button
             android:layout_margin="20dp"
             android:id="@+id/go2_btn"
