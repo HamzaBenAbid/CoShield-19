@@ -21,8 +21,8 @@
     <string name="Take_Test">Take/Retake a test </string>
     <string name="upload_photo">upload photo </string>
     <string name="update">update </string>
-    <string name="homme">homme </string>
-    <string name="femme">femme </string>
+    <string name="male">male</string>
+    <string name="female">"female "</string>
     <string name="take_test">Take Test </string>
     <string name="sex">sex </string>
     <string name="height">height </string>
@@ -44,6 +44,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="SubmitSymptoms">Selected Symptoms</string>
+    <string name="UserInfectedWarning">Please use the application to search for a nearby lab , your are more likely to be infected with Covid-19</string>
 
 
 </resources>

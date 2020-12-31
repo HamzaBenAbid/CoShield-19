@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="7"
     android:background="@color/cardColor"
-    tools:context="com.dsi32g1.coshield19.Home"
+    tools:context="com.dsi32g1.coshield19.taketest"
     android:padding="30dp">
 
 
@@ -45,11 +45,11 @@
             <RadioButton android:id="@+id/radio_homme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/homme" />
+                android:text="@string/male" />
             <RadioButton android:id="@+id/radio_femme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/femme" />
+                android:text="@string/female" />
         </RadioGroup>
 
 
@@ -129,22 +129,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fever"
-            android:layout_marginBottom="20dp"/>
-        <CheckBox android:id="@+id/sore_throat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/smelltaste"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:onClick="onCheckboxClicked"/>
+
         <CheckBox android:id="@+id/smell_taste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/smelltaste"
+            android:layout_marginBottom="20dp"
+            android:onClick="onCheckboxClicked"/>
+
+
+
+        <CheckBox android:id="@+id/sore_throat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/sorethroat"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:onClick="onCheckboxClicked"/>
         <CheckBox android:id="@+id/tiredness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tireddness"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:onClick="onCheckboxClicked"/>
         <Button
             android:layout_margin="20dp"
             android:id="@+id/go2_btn"

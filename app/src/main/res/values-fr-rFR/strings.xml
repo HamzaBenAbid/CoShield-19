@@ -22,8 +22,8 @@
     <string name="GlobalMap">Vérifiez les cas mondiaux/locaux</string>
     <string name="upload_photo">envoyer la photo</string>
     <string name="update">mise à jour</string>
-    <string name="homme">men</string>
-    <string name="femme">female</string>
+    <string name="male">homme</string>
+    <string name="female">femme</string>
     <string name="take_test">"Faites un test "</string>
     <string name="sex">sexe</string>
     <string name="height">Hauteur</string>
@@ -44,4 +44,6 @@
     <string name="menu_gallery">Galerie</string>
     <string name="menu_slideshow">" Diaporama"</string>
     <string name="logout_id">Se déconnecter</string>
+    <string name="SubmitSymptoms">Symptômes sélectionnés</string>
+    <string name="UserInfectedWarning">Veuillez utiliser l\'application pour rechercher un laboratoire à proximité, vous êtes plus susceptible d\'être infecté par Covid-19</string>
 </resources>

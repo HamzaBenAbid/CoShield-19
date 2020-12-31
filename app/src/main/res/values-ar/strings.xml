@@ -22,8 +22,8 @@
     <string name="GlobalMap">التحقق من الحالات العمومية/المحلية</string>
     <string name="upload_photo">حمل الصورة</string>
     <string name="update">تحديث</string>
-    <string name="homme">ذكر</string>
-    <string name="femme">أنثى</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
     <string name="take_test">خذ الاختبار</string>
     <string name="sex">"جنس   "</string>
     <string name="height">"طول القامة "</string>
@@ -44,4 +44,6 @@
     <string name="menu_gallery">صالة عرض</string>
     <string name="menu_slideshow">عرض الشرائح</string>
     <string name="logout_id">تسجيل خروج</string>
+    <string name="SubmitSymptoms">أعراض مختارة</string>
+    <string name="UserInfectedWarning">يرجى استخدام التطبيق للبحث عن مختبر طبي ، فمن المرجح أن تكون مصابًا بـ Covid-19</string>
 </resources>
