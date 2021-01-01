@@ -4,123 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context="com.dsi32g1.coshield19.Profile">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
-    <LinearLayout
-        android:layout_margin="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/profile"></ImageView>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:icon="@drawable/ic_add_24dp"
-            android:text="@string/upload_photo"
-            android:textSize="16dp"
-            style="@style/Widget.Design.ScrimInsetsFrameLayout"
-        />
-    </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/profile"></ImageView>
+
+            <Button
+                style="@style/Widget.Design.ScrimInsetsFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_photo"
+                android:textSize="16dp"
+                app:icon="@drawable/ic_add_24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="45dp">
+            android:layout_marginTop="45dp"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:orientation="horizontal"
-                android:paddingLeft="25dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp">
+
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_email"/>
+                    android:src="@drawable/ic_email" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
-                    android:text="@string/Email"/>
+                    android:text="@string/Email"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:orientation="horizontal"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:paddingLeft="25dp">
+
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_mobile"/>
+                    android:src="@drawable/ic_mobile" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
-                    android:text="@string/phone_number"/>
+                    android:text="@string/phone_number"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:orientation="horizontal"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:paddingLeft="25dp">
+
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_name"/>
+                    android:src="@drawable/ic_name" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
-                    android:text="@string/username"/>
+                    android:text="@string/username"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:orientation="horizontal"
-                android:paddingLeft="25dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:paddingLeft="25dp">
+
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_action_password"/>
+                    android:src="@drawable/ic_action_password" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
-                    android:text="@string/Password"/>
+                    android:text="@string/Password"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
+
         <Button
-            android:textColor="#fff"
-            android:background="@drawable/buttonstyleithgradient"
-            android:layout_marginTop="35dp"
-            android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/buttonstyleithgradient"
             android:text="@string/update"
-            android:textColorHighlight="@color/black"
-             />
+            android:textColor="#fff"
+            android:textColorHighlight="@color/black" />
     </LinearLayout>
 
 
-
-    </ScrollView>
+</ScrollView>

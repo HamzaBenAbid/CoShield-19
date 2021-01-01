@@ -1,168 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="7"
-    android:background="@color/cardColor"
-    tools:context="com.dsi32g1.coshield19.taketest"
-    android:padding="30dp">
+    android:fillViewport="true">
 
-
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        android:text="@string/take_test"
-        android:layout_marginBottom="70dp">
-    </TextView>
+        android:background="@color/cardColor"
+
+        android:orientation="vertical"
+        android:padding="30dp"
+        tools:context="com.dsi32g1.coshield19.taketest">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="20dp">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:gravity="center"
+            android:text="@string/take_test"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="50sp"></TextView>
 
-            android:text="@string/sex">
-        </TextView>
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <RadioButton android:id="@+id/radio_homme"
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/male" />
-            <RadioButton android:id="@+id/radio_femme"
+                android:layout_height="match_parent"
+                android:text="@string/sex"
+                android:textColor="@color/black"
+
+                android:textSize="20sp"></TextView>
+
+            <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/female" />
-        </RadioGroup>
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_homme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/radio_femme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female" />
+            </RadioGroup>
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="@string/height">
-        </TextView>
-        <EditText
-            android:layout_width="wrap_content"
-            android:id="@+id/height"
+        </LinearLayout>
 
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:importantForAutofill="no">
-        </EditText>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="@string/weight">
-        </TextView>
-        <EditText
-            android:id="@+id/weight"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:importantForAutofill="no"
-
-            android:inputType="number">
-        </EditText>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="@string/age"
-            >
-
-        </TextView>
-        <Spinner
-            android:id="@+id/age_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-        </Spinner>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:text="@string/Symptoms"
-            android:layout_marginBottom="20dp">
-
-        </TextView>
-
-        <CheckBox android:id="@+id/fever"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fever"
-            android:layout_marginBottom="20dp"
-            android:onClick="onCheckboxClicked"/>
-
-        <CheckBox android:id="@+id/smell_taste"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/smelltaste"
-            android:layout_marginBottom="20dp"
-            android:onClick="onCheckboxClicked"/>
-
-
-
-        <CheckBox android:id="@+id/sore_throat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sorethroat"
-            android:layout_marginBottom="20dp"
-            android:onClick="onCheckboxClicked"/>
-        <CheckBox android:id="@+id/tiredness"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tireddness"
-            android:layout_marginBottom="20dp"
-            android:onClick="onCheckboxClicked"/>
-        <Button
-            android:layout_margin="20dp"
-            android:id="@+id/go2_btn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/REd"
-            android:text="@string/go_to"
-            android:textColor="#fff">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        </Button>
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/height"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+                android:inputType="number"></EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/weight"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+
+                android:inputType="number"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp"
+          >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/age"
+                android:textColor="@color/black"
+
+                android:textSize="20sp">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/age_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:text="@string/Symptoms"
+                android:textColor="@color/black"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/fever"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/fever" />
+
+            <CheckBox
+                android:id="@+id/smell_taste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/smelltaste" />
+
+
+            <CheckBox
+                android:id="@+id/sore_throat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/sorethroat" />
+
+            <CheckBox
+                android:id="@+id/tiredness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/tireddness" />
+
+            <Button
+                android:id="@+id/go2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@color/REd"
+                android:text="@string/go_to"
+                android:textColor="#fff">
+
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
