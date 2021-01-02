@@ -1,9 +1,16 @@
 package com.dsi32g1.coshield19;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 
-
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -12,11 +19,16 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+
 import static com.dsi32g1.coshield19.R.string.UserInfectedWarning;
 
 
-public class taketest extends AppCompatActivity {
+public class taketest extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    androidx.appcompat.widget.Toolbar toolbar;
     CheckBox fever,smell_taste,sore_throat,tiredness;
 
     @Override
@@ -24,19 +36,32 @@ public class taketest extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_taketest2);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+
         Spinner dropdown = findViewById(R.id.age_spinner);
         String[] items = new String[]{"0-10", "11-20", "21-30", "31-40", "41-50", "50+"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, items);
         dropdown.setAdapter(adapter);
 
-
+        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle;
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_view);
 
         fever = findViewById(R.id.fever);
         smell_taste = findViewById(R.id.smell_taste);
         sore_throat = findViewById(R.id.sore_throat);
         tiredness = findViewById(R.id.tiredness);
         Button submitbtn = findViewById(R.id.go2_btn);
+
+
 
 
             // using basic toast just for testing will make it work better later
@@ -78,9 +103,10 @@ public class taketest extends AppCompatActivity {
 
 
                 // will change this later to make it work with profile status in the dashboard and other layouts
+                    // replace toast with some thing more appealing to the user
                 if (score >= 80) {
-                    String result = getString(UserInfectedWarning);
-                    Toast.makeText(getApplicationContext(),  result, Toast.LENGTH_SHORT).show();
+
+                    alertDialog();
                 }
 
 
@@ -92,6 +118,32 @@ public class taketest extends AppCompatActivity {
         });
 
     }
+
+    // dialog method if user is infected
+    private void alertDialog() {
+
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setMessage(R.string.UserInfectedWarning);
+        dialog.setTitle(R.string.CheckNearbyLabs);
+        dialog.setPositiveButton("Check",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        //  will redirect this to a webview to search for medical labs
+                        Toast.makeText(getApplicationContext(),"Checking nearby labs ...",Toast.LENGTH_LONG).show();
+                    }
+                });
+        dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getApplicationContext(),"Aborting ...",Toast.LENGTH_LONG).show();
+            }
+        });
+        AlertDialog alertDialog=dialog.create();
+        alertDialog.show();
+    }
+
+
     // will use these for later use  don't need them for now but no one mess with this yet
     public void onCheckboxClicked(View view) {
       /*  boolean checked = ((CheckBox) view).isChecked();
@@ -119,6 +171,21 @@ public class taketest extends AppCompatActivity {
 
 
         Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show(); */
+    }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.nav_home:
+                break;
+            case R.id.nav_profile:
+                Intent intent = new Intent(taketest.this, Profile.class);
+                startActivity(intent);
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
 

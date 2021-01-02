@@ -12,13 +12,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    Button button, button2, button3;
+    Button button, TakeTestButton, CheckGlobalBtn;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     androidx.appcompat.widget.Toolbar toolbar;
@@ -38,16 +37,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent);
             }
         });*/
-        button2 = findViewById(R.id.take_btn);
-        button2.setOnClickListener(new View.OnClickListener() {
+        TakeTestButton = findViewById(R.id.take_btn);
+        TakeTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, taketest.class);
                 startActivity(intent);
             }
         });
-        button3 = findViewById(R.id.check_global);
-        button3.setOnClickListener(new View.OnClickListener() {
+        CheckGlobalBtn = findViewById(R.id.check_global);
+        CheckGlobalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, covide19website.class);

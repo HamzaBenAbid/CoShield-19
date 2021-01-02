@@ -8,7 +8,7 @@
     <string name="username"> Username </string>
     <string name="wrong_pass">" Wrong Credentials "</string>
     <string name="appname"> CoShield-19 </string>
-    <string name="go_to">GO</string>
+    <string name="go_to">Check If Infected </string>
     <string name="phone_number">phone number</string>
     <string name="have_account">Already have an account? Login</string>
     <string name="dash_board">Dashboard</string>
@@ -33,7 +33,6 @@
     <string name="smelltaste">Loss of smell and taste </string>
     <string name="tireddness">Tiredness </string>
     <string name="Symptoms">Symptoms </string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -47,6 +46,7 @@
     <string name="SubmitSymptoms">Selected Symptoms</string>
     <string name="UserInfectedWarning">Please use the application to search for a nearby lab , your are more likely to be infected with Covid</string>
     <string name="NotInfected">No symptoms? it looks like you\'re not infected.</string>
+    <string name="CheckNearbyLabs">Check Nearby labs</string>
 
 
 </resources>
