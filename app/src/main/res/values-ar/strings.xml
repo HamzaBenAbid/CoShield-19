@@ -46,4 +46,5 @@
     <string name="logout_id">تسجيل خروج</string>
     <string name="SubmitSymptoms">أعراض مختارة</string>
     <string name="UserInfectedWarning">يرجى استخدام التطبيق للبحث عن مختبر طبي ، فمن المرجح أن تكون مصابًا بـ Covid-19</string>
+    <string name="NotInfected">"لا توجد أعراض؟ يبدو أنك غير مصاب. "</string>
 </resources>

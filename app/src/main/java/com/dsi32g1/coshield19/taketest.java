@@ -19,9 +19,9 @@ public class taketest extends AppCompatActivity {
 
     CheckBox fever,smell_taste,sore_throat,tiredness;
 
-    int score = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_taketest2);
         Spinner dropdown = findViewById(R.id.age_spinner);
@@ -31,69 +31,92 @@ public class taketest extends AppCompatActivity {
         dropdown.setAdapter(adapter);
 
 
+
         fever = findViewById(R.id.fever);
         smell_taste = findViewById(R.id.smell_taste);
         sore_throat = findViewById(R.id.sore_throat);
         tiredness = findViewById(R.id.tiredness);
         Button submitbtn = findViewById(R.id.go2_btn);
 
+
+            // using basic toast just for testing will make it work better later
         submitbtn.setOnClickListener(new View.OnClickListener() {
+            int score ;
+
             @Override
             public void onClick(View v) {
-                String result = getString(R.string.SubmitSymptoms);
+
                 if (fever.isChecked()) {
-                    result += "\n" + getString(R.string.fever);
-                    score -= 40;
-                }
-                if (smell_taste.isChecked()) {
-                    result += "\n" + getString(R.string.smelltaste);
-                    score -= 30;
+
+                    score += 50;
 
                 }
-                if (sore_throat.isChecked()) {
-                    result += "\n" + getString(R.string.sorethroat);
-                    score -= 15;
 
+                 if (smell_taste.isChecked()) {
+
+                    score += 30;
                 }
+
+
+
+                 if (sore_throat.isChecked()) {
+
+                    score += 10;
+                }
+
+
                 if (tiredness.isChecked()) {
-                    result += "\n" + getString(R.string.tireddness);
-                    score -= 15;
+
+                    score += 10;
+                }
+
+
+                if (!tiredness.isChecked()&&!sore_throat.isChecked()&&!fever.isChecked()&&!smell_taste.isChecked()){
+                    Toast.makeText(getApplicationContext(), R.string.NotInfected, Toast.LENGTH_SHORT).show();
+                    score = 0 ;
                 }
 
 
                 // will change this later to make it work with profile status in the dashboard and other layouts
-                if (score <= 20) {
-                    result = getString(UserInfectedWarning);
-                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                if (score >= 80) {
+                    String result = getString(UserInfectedWarning);
+                    Toast.makeText(getApplicationContext(),  result, Toast.LENGTH_SHORT).show();
                 }
 
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+
+
+                score = 0 ;
+
             }
 
         });
-
 
     }
 
     public void onCheckboxClicked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
-        String str="you checked";
-        // Check which checkbox was clicked
+        String str="";
+        // will use these for later use  don't need them for now but no one mess with this yet
+
         switch(view.getId()) {
             case R.id.fever:
-                str += checked?"Selected" + getString(R.string.fever) : "Deselected"+ getString(R.string.fever);
+                str += checked?"Selected " + getString(R.string.fever) : "Deselected "+ getString(R.string.fever);
                 break;
+
             case R.id.smell_taste:
-                str += checked?"Selected" + getString(R.string.smelltaste): "Deselected"+ getString(R.string.smelltaste);
+                str += checked?"Selected " + getString(R.string.smelltaste): "Deselected "+ getString(R.string.smelltaste);
                 break;
+
             case R.id.sore_throat:
-                str += checked?"Selected" + getString(R.string.sorethroat): "Deselected"+ getString(R.string.sorethroat);
+                str += checked?"Selected " + getString(R.string.sorethroat): "Deselected "+ getString(R.string.sorethroat);
                 break;
+
             case R.id.tiredness:
-                str += checked?"Selected" + getString(R.string.tireddness): "Deselected"+ getString(R.string.tireddness);
+                str += checked?"Selected " + getString(R.string.tireddness): "Deselected "+ getString(R.string.tireddness);
                 break;
         }
-        Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+
+        /*Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();*/
     }
 }
 

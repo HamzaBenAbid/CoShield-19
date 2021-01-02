@@ -46,4 +46,5 @@
     <string name="logout_id">Se déconnecter</string>
     <string name="SubmitSymptoms">Symptômes sélectionnés</string>
     <string name="UserInfectedWarning">Veuillez utiliser l\'application pour rechercher un laboratoire à proximité, vous êtes plus susceptible d\'être infecté par Covid-19</string>
+    <string name="NotInfected">"Aucun symptôme? il semble que vous n'êtes pas infecté. "</string>
 </resources>

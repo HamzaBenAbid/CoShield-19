@@ -45,7 +45,8 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="SubmitSymptoms">Selected Symptoms</string>
-    <string name="UserInfectedWarning">Please use the application to search for a nearby lab , your are more likely to be infected with Covid-19</string>
+    <string name="UserInfectedWarning">Please use the application to search for a nearby lab , your are more likely to be infected with Covid</string>
+    <string name="NotInfected">No symptoms? it looks like you\'re not infected.</string>
 
 
 </resources>

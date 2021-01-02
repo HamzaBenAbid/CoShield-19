@@ -115,7 +115,7 @@ return;
             c.setError("Field cannot be empty");
             return  false;
         }else if (!password.matches(pw)){
-            c.setError("Invalid password");
+            c.setError("Choose stronger password with special and caps characters");
             return  false;
         }else {
             c.setError(null);
