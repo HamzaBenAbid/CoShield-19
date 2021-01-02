@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -14,9 +15,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 public class Signup2 extends AppCompatActivity {
-    TextInputLayout a , b , c , d ;
+    TextInputLayout usernameID , emailID , passwordID , PhonenumberID;
 
-    Button button  , button2 ;
+    Button SignedUpBtn, Signup;
     FirebaseDatabase root;
     DatabaseReference reference;
     @Override
@@ -24,8 +25,8 @@ public class Signup2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup2);
 
-       button  = findViewById(R.id.alredy_have_btn);
-        button.setOnClickListener(new View.OnClickListener() {
+        SignedUpBtn = findViewById(R.id.alredy_have_btn);
+        SignedUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(Signup2.this,  Login.class);
@@ -33,76 +34,88 @@ public class Signup2 extends AppCompatActivity {
             }
         });
 
-        a= findViewById(R.id.reg_username);
-        b= findViewById(R.id.reg_email);
-        c= findViewById(R.id.reg_password);
-       d= findViewById(R.id.reg_phone_number);
+            usernameID = findViewById(R.id.reg_username);
+            emailID = findViewById(R.id.reg_email);
+            passwordID = findViewById(R.id.reg_password);
+            PhonenumberID= findViewById(R.id.reg_phone_number);
 
-        button2 =findViewById(R.id.go1_btn);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+             Signup = findViewById(R.id.go1_btn);
+             Signup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
              root = FirebaseDatabase.getInstance();
              reference = root.getReference("users");
-if (!validateName() | !validateEmail() | !validatepassword() | !validatephone()){
-return;
-}
-             //get all the values
-                String name = a.getEditText().getText().toString();
-                String email = b.getEditText().getText().toString();
-                String password = c.getEditText().getText().toString();
-                String phoneNo = d.getEditText().getText().toString();
-              UserHelperClass helper =new UserHelperClass(name,email,phoneNo,password);
-             reference.child(phoneNo).setValue(helper);
+
+            if (!validateName() | !validateEmail() | !validatepassword() | !validatephone()){
+            return;
+            }
+                        //get all the values
+                        String name = usernameID.getEditText().getText().toString();
+                        String email = emailID.getEditText().getText().toString();
+                        String password = passwordID.getEditText().getText().toString();
+                        String phoneNo = PhonenumberID.getEditText().getText().toString();
+                        UserHelperClass helper = new UserHelperClass(name,email,phoneNo,password);
+                        reference.child(phoneNo).setValue(helper);
+
+                        Toast.makeText(getApplicationContext(), "Successfully Registered , Redirecting...",
+                                Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(Signup2.this, Login.class);
+                        startActivity(i);
             }
         });
 
     }
+
+    // username length
     private  Boolean validateName(){
-        String name = a.getEditText().getText().toString();
+        String name = usernameID.getEditText().getText().toString();
         if (name.isEmpty()){
-            a.setError("Field cannot be empty");
+            usernameID.setError("Field cannot be empty");
             return  false;
         }else if (name.length()>=15){
-            a.setError("Username too Long");
+            usernameID.setError("Username too Long");
             return  false;
         }else {
-            a.setError(null);
-            a.setErrorEnabled(false);
+            usernameID.setError(null);
+            usernameID.setErrorEnabled(false);
             return true;
         }
     }
-    private  Boolean validateEmail(){
-        String email = b.getEditText().getText().toString();
-        String em ="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        if (email.isEmpty()){
-            b.setError("Field cannot be empty");
-            return  false;
-        }else if (!email.matches(em)){
-            b.setError("Invalid email address");
-            return  false;
-        }else {
-           b.setError(null);
-            b.setErrorEnabled(false);
-            return true;
+    // making sure we don't throw a random string in there
+        private  Boolean validateEmail(){
+            String email = emailID.getEditText().getText().toString();
+            String emailRegex = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+            if (email.isEmpty()){
+                emailID.setError("Field cannot be empty");
+                return  false;
+            }else if (!email.matches(emailRegex)){
+                emailID.setError("Invalid email address");
+                return  false;
+            }else {
+                emailID.setError(null);
+                emailID.setErrorEnabled(false);
+                return true;
+            }
         }
-    }
+
+    //validating phone so we can use an sms verification in later versions
     private  Boolean validatephone(){
-        String phoneNo = d.getEditText().getText().toString();
+        String phoneNo = PhonenumberID.getEditText().getText().toString();
         if (phoneNo.isEmpty()){
-            d.setError("Field cannot be empty");
+            PhonenumberID.setError("Field cannot be empty");
             return  false;
         }else if (phoneNo.length()!=8){
-            a.setError("invalid phone number ");
+            PhonenumberID.setError("invalid phone number ");
             return  false;}
         else {
-            d.setError(null);
-            d.setErrorEnabled(false);
+            PhonenumberID.setError(null);
+            PhonenumberID.setErrorEnabled(false);
             return true;
         }
     }
+    // forcing password strength
     private  Boolean validatepassword(){
-        String password = c.getEditText().getText().toString();
+        String password = passwordID.getEditText().getText().toString();
         String pw ="^"+
               //  "(?=.*[0-9])"+
              //   "(?=.*[a-z])"+
@@ -112,14 +125,14 @@ return;
                 ".{4,}"+
                 "$";
         if (password.isEmpty()){
-            c.setError("Field cannot be empty");
+            passwordID.setError("Field cannot be empty");
             return  false;
         }else if (!password.matches(pw)){
-            c.setError("Choose stronger password with special and caps characters");
+            passwordID.setError("Choose stronger password with special and caps characters");
             return  false;
         }else {
-            c.setError(null);
-           c.setErrorEnabled(false);
+            passwordID.setError(null);
+            passwordID.setErrorEnabled(false);
             return true;
         }
     }

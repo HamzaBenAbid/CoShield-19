@@ -92,11 +92,12 @@ public class taketest extends AppCompatActivity {
         });
 
     }
-
+    // will use these for later use  don't need them for now but no one mess with this yet
     public void onCheckboxClicked(View view) {
-        boolean checked = ((CheckBox) view).isChecked();
+      /*  boolean checked = ((CheckBox) view).isChecked();
         String str="";
-        // will use these for later use  don't need them for now but no one mess with this yet
+
+
 
         switch(view.getId()) {
             case R.id.fever:
@@ -116,7 +117,8 @@ public class taketest extends AppCompatActivity {
                 break;
         }
 
-        /*Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();*/
+
+        Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show(); */
     }
 }
 
