@@ -2,6 +2,7 @@
   <dictionary name="black">
     <words>
       <w>phonenumber</w>
+      <w>profileintent</w>
       <w>signup</w>
     </words>
   </dictionary>

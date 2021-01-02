@@ -178,10 +178,12 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_home:
+                Intent Homeintent = new Intent(taketest.this, Home.class);
+                startActivity(Homeintent);
                 break;
             case R.id.nav_profile:
-                Intent intent = new Intent(taketest.this, Profile.class);
-                startActivity(intent);
+                Intent Profileintent = new Intent(taketest.this, Profile.class);
+                startActivity(Profileintent);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
