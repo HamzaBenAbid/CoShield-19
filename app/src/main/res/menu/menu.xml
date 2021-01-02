@@ -7,7 +7,7 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/home_icone"
+            android:icon="@drawable/profile"
             android:title="@string/profile" />
         <item
             android:id="@+id/nav_logout"

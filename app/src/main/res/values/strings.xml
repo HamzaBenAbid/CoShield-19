@@ -16,7 +16,6 @@
     <string name="logout">logout</string>
     <string name="settings_text">Settings</string>
     <string name="heath_condition"> Heath Status</string>
-    <string name="Map">Check Nearby infected users</string>
     <string name="GlobalMap">Check Global/local Cases</string>
     <string name="Take_Test">Take/Retake a test </string>
     <string name="upload_photo">upload photo </string>
@@ -47,6 +46,7 @@
     <string name="UserInfectedWarning">Please use the application to search for a nearby lab , your are more likely to be infected with Covid</string>
     <string name="NotInfected">No symptoms? it looks like you\'re not infected.</string>
     <string name="CheckNearbyLabs">Check Nearby labs</string>
+    <string name="nearby_hospitals">Nearby Hospitals</string>
 
 
 </resources>

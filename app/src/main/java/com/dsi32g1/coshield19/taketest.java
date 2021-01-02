@@ -1,5 +1,17 @@
 package com.dsi32g1.coshield19;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Spinner;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -7,21 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.view.MenuItem;
-import android.view.View;
-import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Spinner;
-import android.widget.Toast;
-
 import com.google.android.material.navigation.NavigationView;
-
-import static com.dsi32g1.coshield19.R.string.UserInfectedWarning;
 
 
 public class taketest extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -119,7 +117,7 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
 
     }
 
-    // dialog method if user is infected
+    // dialog method when user is infected
     private void alertDialog() {
 
         AlertDialog.Builder dialog=new AlertDialog.Builder(this);
@@ -131,12 +129,16 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
                                         int which) {
                         //  will redirect this to a webview to search for medical labs
                         Toast.makeText(getApplicationContext(),"Checking nearby labs ...",Toast.LENGTH_LONG).show();
+                        Intent NearbyLabsIntent = new Intent(taketest.this, nearbyLabs.class);
+                        startActivity(NearbyLabsIntent);
                     }
                 });
         dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(getApplicationContext(),"Aborting ...",Toast.LENGTH_LONG).show();
+
+
             }
         });
         AlertDialog alertDialog=dialog.create();
@@ -174,6 +176,8 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
     }
 
 
+    // intent and navigation selection
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {

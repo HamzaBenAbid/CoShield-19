@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,7 +18,7 @@ import com.google.android.material.navigation.NavigationView;
 
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    Button button, TakeTestButton, CheckGlobalBtn;
+    Button NearbyLabs, TakeTestButton, CheckGlobalBtn;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     androidx.appcompat.widget.Toolbar toolbar;
@@ -37,6 +38,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent);
             }
         });*/
+        // take test button
         TakeTestButton = findViewById(R.id.take_btn);
         TakeTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,11 +47,23 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent);
             }
         });
+
+        // check global redirect button
         CheckGlobalBtn = findViewById(R.id.check_global);
         CheckGlobalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, covide19website.class);
+                startActivity(intent);
+            }
+        });
+
+        // check global redirect button
+        NearbyLabs = findViewById(R.id.CheckNearbyLabs);
+        NearbyLabs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, nearbyLabs.class);
                 startActivity(intent);
             }
         });
@@ -65,6 +79,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {

@@ -17,7 +17,6 @@
     <string name="logout">" Se déconnecter"</string>
     <string name="settings_text">Paramètres</string>
     <string name="heath_condition">état de santé</string>
-    <string name="Map">Vérifiez les utilisateurs infectés à proximité</string>
     <string name="Take_Test">passer un test</string>
     <string name="GlobalMap">Vérifiez les cas mondiaux/locaux</string>
     <string name="upload_photo">envoyer la photo</string>
@@ -47,5 +46,6 @@
     <string name="SubmitSymptoms">Symptômes sélectionnés</string>
     <string name="UserInfectedWarning">Veuillez utiliser l\'application pour rechercher un laboratoire à proximité, vous êtes plus susceptible d\'être infecté par Covid-19</string>
     <string name="NotInfected">"Aucun symptôme? il semble que vous n'êtes pas infecté. "</string>
-    <string name="CheckNearbyLabs">echercher un laboratoire à proximité</string>
+    <string name="CheckNearbyLabs">chercher un laboratoire à proximité</string>
+    <string name="nearby_hospitals">Hôpitaux à proximité</string>
 </resources>

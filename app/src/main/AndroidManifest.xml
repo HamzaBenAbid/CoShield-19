@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.dsi32g1.coshield19">
 
+    <uses-permission android:name="com.androidtutorialpoint.mymapsappsdirection.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application
+
+
         android:allowBackup="true"
         android:icon="@drawable/logogenrale"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logogenrale"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+
         <activity android:name="com.dsi32g1.coshield19.covide19website" />
         <activity android:name="com.dsi32g1.coshield19.taketest" />
         <activity android:name="com.dsi32g1.coshield19.Profile" />
         <activity android:name="com.dsi32g1.coshield19.Home" />
         <activity android:name="com.dsi32g1.coshield19.Signup2" />
         <activity android:name="com.dsi32g1.coshield19.Login" />
-        <activity android:name="com.dsi32g1.coshield19.MainActivity">
+        <activity android:name="com.dsi32g1.coshield19.nearbyLabs"/>
+        <activity android:name="com.dsi32g1.coshield19.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,6 +38,13 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${mapsApiKey}" />
     </application>
 
 </manifest>

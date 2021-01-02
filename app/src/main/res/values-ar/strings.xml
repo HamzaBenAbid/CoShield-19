@@ -17,7 +17,6 @@
     <string name="logout">تسجيل خروج</string>
     <string name="settings_text">ضبط</string>
     <string name="heath_condition">الحالة الصحية</string>
-    <string name="Map">"التحقق من المستخدمين المصابين "</string>
     <string name="Take_Test">إجراء اختبار طبي</string>
     <string name="GlobalMap">التحقق من الحالات العمومية/المحلية</string>
     <string name="upload_photo">حمل الصورة</string>
@@ -48,4 +47,5 @@
     <string name="UserInfectedWarning">يرجى استخدام التطبيق للبحث عن مختبر طبي ، فمن المرجح أن تكون مصابًا بـ Covid-19</string>
     <string name="NotInfected">"لا توجد أعراض؟ يبدو أنك غير مصاب. "</string>
     <string name="CheckNearbyLabs">بحث عن مختبر طبي</string>
+    <string name="nearby_hospitals">المستشفيات القريبة</string>
 </resources>

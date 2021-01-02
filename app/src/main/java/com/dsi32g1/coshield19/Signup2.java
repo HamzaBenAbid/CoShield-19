@@ -13,6 +13,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 
 public class Signup2 extends AppCompatActivity {
     TextInputLayout usernameID , emailID , passwordID , PhonenumberID;
@@ -50,10 +52,10 @@ public class Signup2 extends AppCompatActivity {
             return;
             }
                         //get all the values
-                        String name = usernameID.getEditText().getText().toString();
-                        String email = emailID.getEditText().getText().toString();
-                        String password = passwordID.getEditText().getText().toString();
-                        String phoneNo = PhonenumberID.getEditText().getText().toString();
+                        String name = Objects.requireNonNull(usernameID.getEditText()).getText().toString();
+                        String email = Objects.requireNonNull(emailID.getEditText()).getText().toString();
+                        String password = Objects.requireNonNull(passwordID.getEditText()).getText().toString();
+                        String phoneNo = Objects.requireNonNull(PhonenumberID.getEditText()).getText().toString();
                         UserHelperClass helper = new UserHelperClass(name,email,phoneNo,password);
                         reference.child(phoneNo).setValue(helper);
 
@@ -68,7 +70,7 @@ public class Signup2 extends AppCompatActivity {
 
     // username length
     private  Boolean validateName(){
-        String name = usernameID.getEditText().getText().toString();
+        String name = Objects.requireNonNull(usernameID.getEditText()).getText().toString();
         if (name.isEmpty()){
             usernameID.setError("Field cannot be empty");
             return  false;
@@ -83,7 +85,7 @@ public class Signup2 extends AppCompatActivity {
     }
     // making sure we don't throw a random string in there
         private  Boolean validateEmail(){
-            String email = emailID.getEditText().getText().toString();
+            String email = Objects.requireNonNull(emailID.getEditText()).getText().toString();
             String emailRegex = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
             if (email.isEmpty()){
                 emailID.setError("Field cannot be empty");
@@ -100,7 +102,7 @@ public class Signup2 extends AppCompatActivity {
 
     //validating phone so we can use an sms verification in later versions
     private  Boolean validatephone(){
-        String phoneNo = PhonenumberID.getEditText().getText().toString();
+        String phoneNo = Objects.requireNonNull(PhonenumberID.getEditText()).getText().toString();
         if (phoneNo.isEmpty()){
             PhonenumberID.setError("Field cannot be empty");
             return  false;
@@ -115,7 +117,7 @@ public class Signup2 extends AppCompatActivity {
     }
     // forcing password strength
     private  Boolean validatepassword(){
-        String password = passwordID.getEditText().getText().toString();
+        String password = Objects.requireNonNull(passwordID.getEditText()).getText().toString();
         String pw ="^"+
               //  "(?=.*[0-9])"+
              //   "(?=.*[a-z])"+

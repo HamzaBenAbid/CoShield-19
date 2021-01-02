@@ -18,6 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 
 public class Login extends AppCompatActivity {
     Button callsignup, callsignin;
@@ -43,8 +45,8 @@ public class Login extends AppCompatActivity {
         callsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String password = passwordval.getEditText().getText().toString().trim();
-                final String name = usernameval.getEditText().getText().toString().trim();
+                final String password = Objects.requireNonNull(passwordval.getEditText()).getText().toString().trim();
+                final String name = Objects.requireNonNull(usernameval.getEditText()).getText().toString().trim();
                 if (!validateName() | !validatepassword()) {
                     return;
                 }
@@ -58,9 +60,11 @@ public class Login extends AppCompatActivity {
                             usernameval.setError(null);
                             usernameval.setErrorEnabled(false);
 
-                            String systemPassword = snapshot.getValue().toString();
-                            String b =getSentence(systemPassword,"password");
-                           String c= b.substring(b.indexOf("password") +9 , b.indexOf(","));
+                            String systemPassword = Objects.requireNonNull(snapshot.getValue()).toString();
+
+                            String b = getSentence(systemPassword,"password");
+                            assert b != null;
+                            String  c = b.substring(b.indexOf("password") +9 , b.indexOf(","));
 
                             if (c.equals(password)) {
                                 passwordval.setError(null);
@@ -89,9 +93,10 @@ public class Login extends AppCompatActivity {
         });
 
     }
+    // making sure password is not null
 
     private Boolean validatepassword() {
-        String password = passwordval.getEditText().getText().toString();
+        String password = Objects.requireNonNull(passwordval.getEditText()).getText().toString();
 
         if (password.isEmpty()) {
             passwordval.setError("Field cannot be empty");
@@ -102,9 +107,9 @@ public class Login extends AppCompatActivity {
             return true;
         }
     }
-
+    // making sure Username is not null
     private Boolean validateName() {
-        String name = usernameval.getEditText().getText().toString();
+        String name = Objects.requireNonNull(usernameval.getEditText()).getText().toString();
         if (name.isEmpty()) {
             usernameval.setError("Field cannot be empty");
             return false;
@@ -115,27 +120,29 @@ public class Login extends AppCompatActivity {
         }
     }
     public static String getSentence(String text, String word) {
-        String sentence = "";
+        StringBuilder sentence = new StringBuilder();
         if (text.toLowerCase().contains(word)) {
             if (text.contains("password")) {  //Are there sentences terminating in a period?
                 int loc = text.toLowerCase().indexOf(word);
                 int a = loc;
                 while (a >= 0) {
                     if (text.charAt(a) == ',' || a == 0) {
-                        sentence = text.substring(a,loc);
+                        sentence = new StringBuilder(text.substring(a, loc));
                         a = 0;
                     }
                     a--;
                 }
                 a = loc + word.length();
                 while (a <= text.length()) {
-                    if (text.charAt(a) == ',' || a == text.length()) {
-                        sentence += text.substring(loc,a+1);
+                    if (text.charAt(a) == ',') {
+                        sentence.append(text.substring(loc, a + 1));
                         a = text.length()+1;
+                    } else {
+                        text.length();
                     }
                     a++;
                 }
-                return sentence;
+                return sentence.toString();
             } else {
                 return text;      //If no period, return full text
             }
