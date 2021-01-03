@@ -27,7 +27,7 @@
     <string name="height">height </string>
     <string name="weight">weight </string>
     <string name="age">Age </string>
-    <string name="fever">fever </string>
+    <string name="fever">"Fever "</string>
     <string name="sorethroat">SoreThroat </string>
     <string name="smelltaste">Loss of smell and taste </string>
     <string name="tireddness">Tiredness </string>
@@ -44,9 +44,10 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="SubmitSymptoms">Selected Symptoms</string>
     <string name="UserInfectedWarning">Please use the application to search for a nearby lab , your are more likely to be infected with Covid</string>
-    <string name="NotInfected">No symptoms? it looks like you\'re not infected.</string>
+    <string name="NotInfected"> it looks like you\'re not infected.</string>
     <string name="CheckNearbyLabs">Check Nearby labs</string>
     <string name="nearby_hospitals">Nearby Hospitals</string>
+    <string name="NotInfectedTitle">Not Infected with Covid-19</string>
 
 
 </resources>

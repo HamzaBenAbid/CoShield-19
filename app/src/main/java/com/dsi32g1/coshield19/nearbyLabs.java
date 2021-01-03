@@ -170,7 +170,7 @@ public class nearbyLabs extends FragmentActivity implements OnMapReadyCallback,
         googlePlacesUrl.append("&radius=").append(PROXIMITY_RADIUS);
         googlePlacesUrl.append("&type=").append(nearbyPlace);
         googlePlacesUrl.append("&sensor=true");
-        googlePlacesUrl.append("&key=" + "AIzaSyClgo5c5o4NleE_LMXci4-zKcwBLihlF0U");
+        googlePlacesUrl.append("&key=" + "AIzaSyCTHjWNfOzXoKeSqkGOD-459Zjb4l4ZsGE");
         Log.d("getUrl", googlePlacesUrl.toString());
         return (googlePlacesUrl.toString());
     }

@@ -95,7 +95,6 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
 
 
                 if (!tiredness.isChecked()&&!sore_throat.isChecked()&&!fever.isChecked()&&!smell_taste.isChecked()){
-                    Toast.makeText(getApplicationContext(), R.string.NotInfected, Toast.LENGTH_SHORT).show();
                     score = 0 ;
                 }
 
@@ -104,7 +103,12 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
                     // replace toast with some thing more appealing to the user
                 if (score >= 80) {
 
-                    alertDialog();
+                    alertDialogInfected();
+                }
+
+                if (score <= 60  ){
+
+                    alertDialogNotInfected();
                 }
 
 
@@ -118,7 +122,7 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
     }
 
     // dialog method when user is infected
-    private void alertDialog() {
+    private void alertDialogInfected() {
 
         AlertDialog.Builder dialog=new AlertDialog.Builder(this);
         dialog.setMessage(R.string.UserInfectedWarning);
@@ -127,13 +131,13 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int which) {
-                        //  will redirect this to a webview to search for medical labs
+                        //  will redirect this to a web view to search for medical labs
                         Toast.makeText(getApplicationContext(),"Checking nearby labs ...",Toast.LENGTH_LONG).show();
                         Intent NearbyLabsIntent = new Intent(taketest.this, nearbyLabs.class);
                         startActivity(NearbyLabsIntent);
                     }
                 });
-        dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(getApplicationContext(),"Aborting ...",Toast.LENGTH_LONG).show();
@@ -144,6 +148,31 @@ public class taketest extends AppCompatActivity implements NavigationView.OnNavi
         AlertDialog alertDialog=dialog.create();
         alertDialog.show();
     }
+
+    private void alertDialogNotInfected() {
+
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setMessage(R.string.NotInfected);
+        dialog.setTitle(R.string.NotInfectedTitle);
+        dialog.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        // event upon pressing OK will find another idea behind it
+                    }
+                });
+        dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // cancel event
+
+
+            }
+        });
+        AlertDialog alertDialog=dialog.create();
+        alertDialog.show();
+    }
+
 
 
     // will use these for later use  don't need them for now but no one mess with this yet
