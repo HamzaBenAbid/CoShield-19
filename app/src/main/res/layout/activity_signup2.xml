@@ -22,7 +22,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/logogenrale"></ImageView>
+            android:src="@drawable/logogenrale" />
 
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -91,8 +91,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/REd"
-        android:text="@string/go_to"
-        android:textColor="#fff"></Button>
+        android:text="@string/sign_up"
+        android:textColor="#fff" />
 
     <Button
         android:id="@+id/alredy_have_btn"
@@ -101,7 +101,7 @@
         android:layout_margin="20dp"
         android:background="@color/REd"
         android:text="@string/have_account"
-        android:textColor="#fff"></Button>
+        android:textColor="#fff" />
 
 
 
